@@ -1,0 +1,32 @@
+buildscript {
+    ext.versions = [
+            minSdk             : 21,
+            compileSdk         : 28,
+            targetSdk          : 28,
+            androidGradlePlugin: '3.3.0',
+            mavenPublishPlugin : '0.7.0',
+            versionsPlugin     : '0.20.0',
+            hyperion           : '0.9.27',
+            debugDb            : '1.0.4'
+    ]
+
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.vanniktech:gradle-maven-publish-plugin:$versions.mavenPublishPlugin"
+        classpath "com.android.tools.build:gradle:$versions.androidGradlePlugin"
+        classpath "com.github.ben-manes:gradle-versions-plugin:$versions.versionsPlugin"
+    }
+}
+
+subprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}

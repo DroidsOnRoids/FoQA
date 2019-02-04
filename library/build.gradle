@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.vanniktech.maven.publish'
+apply plugin: 'com.github.ben-manes.versions'
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+    }
+}
+
+group = GROUP
+version = VERSION_NAME
+
+dependencies {
+    implementation "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-measurement:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-disk:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-recorder:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-phoenix:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-crash:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-shared-preferences:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-geiger-counter:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
+    implementation "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
+
+    implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
+}

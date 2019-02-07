@@ -1,1 +1,11 @@
-<manifest package="pl.droidsonroids.foqa"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.droidsonroids.foqa">
+
+    <application>
+        <provider
+            android:initOrder="-2147483648"
+            android:name="pl.droidsonroids.foqa.InitProvider"
+            android:authorities="pl.droidsonroids.foqa.init"
+            android:exported="false" />
+    </application>
+</manifest>

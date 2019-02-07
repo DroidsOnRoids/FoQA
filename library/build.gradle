@@ -26,6 +26,10 @@ dependencies {
     implementation "com.willowtreeapps.hyperion:hyperion-geiger-counter:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
+    implementation "com.github.Commit451:Hyperion-Chuck:$versions.hyperionChuck"
+    implementation "com.star_zero:hyperion-appinfo:$versions.hyperionAppInfo"
+    implementation "com.github.takahirom:Hyperion-Simple-Item:$versions.hyperionSimpleItem"
+    implementation "com.jaredrummler:android-device-names:$versions.deviceNames"
 
     implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 }

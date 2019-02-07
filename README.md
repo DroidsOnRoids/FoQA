@@ -12,14 +12,14 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids:foqa:0.0.1'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.2'
 }
 ```
 
 If not already present add Maven Central repository:
 ```groovy
 repositories {
-    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 ```
 

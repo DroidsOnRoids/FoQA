@@ -3,11 +3,15 @@ buildscript {
             minSdk             : 21,
             compileSdk         : 28,
             targetSdk          : 28,
-            androidGradlePlugin: '3.3.0',
+            androidGradlePlugin: '3.3.1',
             mavenPublishPlugin : '0.7.0',
             versionsPlugin     : '0.20.0',
             hyperion           : '0.9.27',
-            debugDb            : '1.0.4'
+            debugDb            : '1.0.4',
+            hyperionChuck      : '1.0.0',
+            hyperionAppInfo    : '1.0.0',
+            hyperionSimpleItem : '0.4.0',
+            deviceNames        : '1.1.8',
     ]
 
     repositories {
@@ -27,6 +31,7 @@ subprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
         jcenter()
     }
 }

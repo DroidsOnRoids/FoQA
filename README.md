@@ -25,8 +25,12 @@ repositories {
 
 ## Contents
 
-- [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) with plugins
+- [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) with core plugins
+- [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
+- [Hyperion App Info](https://github.com/willowtreeapps/Hyperion-Android)
+- [Hyperion Simple Item](https://github.com/takahirom/Hyperion-Simple-Item)
 - [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
+- Custom Hyperion menu item with Device market name [DeviceInfoPlugin](library/src/main/java/pl/droidsonroids/foqa/DeviceInfoPlugin.java)
 
 See [build.gradle](library/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
 

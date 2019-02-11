@@ -1,5 +1,7 @@
 # FoQA
 
+![Logo](seal.svg "Logo")
+
 Container for various Quality Assurance utilities to be included in QA/testing variants of Android apps.
 
 ## Description
@@ -12,7 +14,7 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.2'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.3'
 }
 ```
 

@@ -1,3 +1,6 @@
+### SNAPSHOT
+- Android Debug Database 1.0.5
+
 ### 0.0.3 - 11.02.2019
 - Add device market name menu item icon
 

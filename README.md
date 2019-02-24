@@ -1,6 +1,6 @@
 # FoQA
 
-![Logo](seal.svg "Logo")
+<img src="seal.svg" alt="Logo" width="200"/>
 
 Container for various Quality Assurance utilities to be included in QA/testing variants of Android apps.
 

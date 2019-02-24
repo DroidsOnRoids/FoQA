@@ -7,7 +7,7 @@ buildscript {
             mavenPublishPlugin : '0.7.0',
             versionsPlugin     : '0.20.0',
             hyperion           : '0.9.27',
-            debugDb            : '1.0.4',
+            debugDb            : '1.0.5',
             hyperionChuck      : '1.0.0',
             hyperionAppInfo    : '1.0.0',
             hyperionSimpleItem : '0.4.0',

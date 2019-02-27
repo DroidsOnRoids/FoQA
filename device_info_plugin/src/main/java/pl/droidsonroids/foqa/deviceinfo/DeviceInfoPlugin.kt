@@ -13,14 +13,14 @@ import com.willowtreeapps.hyperion.plugin.v1.PluginModule
 
 @AutoService(Plugin::class)
 class DeviceInfoPlugin : Plugin() {
-    override fun createPluginModule() = DeviceInfoModule()
+    override fun createPluginModule(): PluginModule = DeviceInfoModule()
 }
 
-class DeviceInfoModule : PluginModule() {
+internal class DeviceInfoModule : PluginModule() {
 
     @SuppressLint("SetTextI18n")
     override fun createPluginView(layoutInflater: LayoutInflater, parent: ViewGroup): View {
-        val view = layoutInflater.inflate(R.layout.menu_item, parent, false) as TextView
+        val view = layoutInflater.inflate(R.layout.foqa_menu_item, parent, false) as TextView
         val manufacturer = Build.MANUFACTURER
         val deviceModel = DeviceName.getDeviceName()
         val sdk = Build.VERSION.RELEASE

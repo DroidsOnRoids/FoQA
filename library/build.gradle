@@ -19,4 +19,5 @@ dependencies {
     implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 
     implementation project(':device_info_plugin')
+    implementation project(':font_scale_plugin')
 }

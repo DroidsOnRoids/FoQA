@@ -4,7 +4,7 @@
           android:padding="@dimen/hype_plugin_padding"
           android:gravity="center_vertical|start"
           android:orientation="horizontal"
-          android:drawableStart="@drawable/ic_info"
+    android:drawableStart="@drawable/foqa_ic_info"
           android:drawablePadding="12dp"
           tools:text="Samsung J5 Android: 9"
           android:layout_width="wrap_content"

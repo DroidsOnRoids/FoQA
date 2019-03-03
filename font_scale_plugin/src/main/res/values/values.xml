@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="foqa_font_scale_plugin_name">Font Scale</string>
+    <string name="foqa_font_scale_value">%1.2f</string>
+</resources>

@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SeekBar xmlns:android="http://schemas.android.com/apk/res/android"
-         android:minHeight="131dp"
-         android:padding="@dimen/hype_plugin_padding"
-         android:gravity="center_vertical|start"
-         android:orientation="horizontal"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="131dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/hype_plugin_padding">
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:layout_width="@dimen/hype_plugin_icon_size"
+        android:layout_height="@dimen/hype_plugin_icon_size"
+        android:src="@drawable/foqa_ic_font_scale" />
+
+    <TextView
+        android:layout_marginBottom="12dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/fontScaleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        tools:text="1.23" />
+
+    <SeekBar
+        android:layout_gravity="top"
+        android:layout_marginTop="8dp"
+        android:id="@+id/fontScaleSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

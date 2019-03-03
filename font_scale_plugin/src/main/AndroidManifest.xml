@@ -1,3 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="pl.droidsonroids.foqa.deviceinfo">
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="pl.droidsonroids.foqa.fontscale">
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 </manifest>

@@ -27,4 +27,6 @@ internal class DeviceInfoModule : PluginModule() {
         view.text = "$manufacturer $deviceModel Android: $sdk"
         return view
     }
+
+    override fun getName() = R.string.foqa_device_info_plugin_name
 }

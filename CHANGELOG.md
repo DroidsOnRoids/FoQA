@@ -1,5 +1,8 @@
-### SNAPSHOT
+### 0.0.4 - 04.03.2019
 - Android Debug Database 1.0.5
+- Unify menu item style
+- Extract Device info plugin to separate artifact, remove simple menu item dependency
+- Add Font scale plugin
 
 ### 0.0.3 - 11.02.2019
 - Add device market name menu item icon

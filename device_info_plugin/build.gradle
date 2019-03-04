@@ -1,5 +1,4 @@
 group = GROUP
-version = VERSION_NAME
 
 dependencies {
     implementation "com.jaredrummler:android-device-names:$versions.deviceNames"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableStart="@drawable/foqa_ic_info"
+    android:drawableLeft="@drawable/foqa_ic_info"
+    android:drawablePadding="28dp"
+    android:gravity="center_vertical|start"
+    android:minHeight="131dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/hype_plugin_padding"
+    android:textColor="@color/hype_plugin_color_selector"
+    android:textSize="16sp"
+    tools:text="Samsung J5 Android: 9" />

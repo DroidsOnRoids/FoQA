@@ -1,3 +1,6 @@
+### 0.0.5 - SNAPSHOT
+- Fix error message in Font scale plugin when system settings write management is not available
+
 ### 0.0.4 - 04.03.2019
 - Android Debug Database 1.0.5
 - Unify menu item style

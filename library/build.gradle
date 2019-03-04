@@ -1,6 +1,3 @@
-group = GROUP
-version = VERSION_NAME
-
 dependencies {
     implementation "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"

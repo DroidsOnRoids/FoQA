@@ -14,7 +14,7 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.3'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.4'
 }
 ```
 
@@ -30,9 +30,9 @@ repositories {
 - [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) with core plugins
 - [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
 - [Hyperion App Info](https://github.com/willowtreeapps/Hyperion-Android)
-- [Hyperion Simple Item](https://github.com/takahirom/Hyperion-Simple-Item)
 - [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
-- Custom Hyperion menu item with Device market name [DeviceInfoPlugin](library/src/main/java/pl/droidsonroids/foqa/DeviceInfoPlugin.java)
+- Hyperion menu item with Device market name [DeviceInfoPlugin](device_info_plugin)
+- Hyperion menu item with font scale changer [FontScalePlugin](font_scale_plugin)
 
 See [build.gradle](library/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
 

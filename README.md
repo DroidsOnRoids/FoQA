@@ -14,7 +14,7 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.4'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.5'
 }
 ```
 

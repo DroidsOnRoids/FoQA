@@ -1,4 +1,4 @@
-### 0.0.5 - SNAPSHOT
+### 0.0.5 - 04.03.2019
 - Fix error message in Font scale plugin when system settings write management is not available
 
 ### 0.0.4 - 04.03.2019

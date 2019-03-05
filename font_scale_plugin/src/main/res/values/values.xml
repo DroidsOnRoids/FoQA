@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="foqa_font_scale_plugin_name">Font Scale</string>
+    <string name="foqa_font_scale_system_settings_disabled">System settings write management not available</string>
     <string name="foqa_font_scale_value">%1.2f</string>
     <string name="foqa_font_scale_system_settings_disabled">System settings writing cannot be enabled on this device</string>
 </resources>

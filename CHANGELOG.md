@@ -1,3 +1,11 @@
+### 0.0.6 - 05.03.2019
+- Android Gradle Plugin 3.3.2
+- Open directly ACTION_MANAGE_WRITE_SETTINGS for given app
+- Add minimum API level (24) restriction to font scale plugin 
+
+### 0.0.5 - 04.03.2019
+- Fix error message in Font scale plugin when system settings write management is not available
+
 ### 0.0.4 - 04.03.2019
 - Android Debug Database 1.0.5
 - Unify menu item style

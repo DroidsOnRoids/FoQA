@@ -7,7 +7,7 @@ Container for various Quality Assurance utilities to be included in QA/testing v
 ## Description
 
 Integrate various Quality Assurance tools into Android application by adding just one line to `build.gradle`.
-FoQA Hyperion plugins can also be used separately.
+FoQA [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) plugins can also be used separately.
 
 ## Usage
 
@@ -34,6 +34,10 @@ repositories {
 - [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
 - Hyperion menu item with Device market name [Hyperion Device Info](#device-info-plugin)
 - Hyperion menu item with font scale changer [Hyperion Font Scale](#font-scale-plugin)
+
+See [build.gradle](library/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
+
+## FoQA Hyperion plugins
 
 ### Device Info plugin
 
@@ -64,8 +68,6 @@ dependencies {
     debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.6'
 }
 ```
-
-See [build.gradle](library/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
 
 ## License
 

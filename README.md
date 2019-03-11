@@ -15,7 +15,7 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.6'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.7'
 }
 ```
 
@@ -50,14 +50,14 @@ Shows device market name and Android version.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.6'
+    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.7'
 }
 ```
 
 ### Font Scale plugin
 
 Allows to quickly change system font scale in range from `0.4` to `1.6`.
-On devices with Android 6 or newer system settings write prompt will appear when setting scale for the first time. 
+System settings write prompt will appear when setting scale for the first time. 
 
 <img src="art/font_scale.gif" alt="Font scale plugin demo"/>
 
@@ -65,7 +65,7 @@ On devices with Android 6 or newer system settings write prompt will appear when
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.6'
+    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.7'
 }
 ```
 

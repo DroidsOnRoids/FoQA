@@ -13,7 +13,7 @@ import pl.droidsonroids.foqa.fontscale.R
 internal class FontScaleInteractor(private val context: Context) {
 
     var systemFontScale
-        get() = Settings.System.getFloat(context.contentResolver, Settings.System.FONT_SCALE)
+        get() = Settings.System.getFloat(context.contentResolver, Settings.System.FONT_SCALE, 1.0f)
         set(value) {
             Settings.System.putFloat(context.contentResolver, Settings.System.FONT_SCALE, value)
         }
@@ -30,8 +30,8 @@ internal class FontScaleInteractor(private val context: Context) {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun startSystemSettingsActivity() {
         val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            .setData(Uri.parse("package:" + context.packageName))
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                .setData(Uri.parse("package:" + context.packageName))
         try {
             context.startActivity(intent)
         } catch (e: ActivityNotFoundException) {

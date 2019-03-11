@@ -1,3 +1,6 @@
+### 0.0.7 - 05.03.2019
+- Add default font scale value for case when settings does not exist
+
 ### 0.0.6 - 05.03.2019
 - Android Gradle Plugin 3.3.2
 - Open directly ACTION_MANAGE_WRITE_SETTINGS for given app

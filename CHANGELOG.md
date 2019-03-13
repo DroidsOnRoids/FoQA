@@ -1,4 +1,7 @@
-### 0.0.7 - 05.03.2019
+### 0.0.8 - 13.03.2019
+- No changes, fix broken upload to Maven Central
+
+### 0.0.7 - 11.03.2019
 - Add default font scale value for case when settings does not exist
 
 ### 0.0.6 - 05.03.2019

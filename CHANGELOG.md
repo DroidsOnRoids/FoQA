@@ -1,3 +1,6 @@
+### 0.0.9 - 22.03.2019
+- Gradle 5.3
+
 ### 0.0.8 - 13.03.2019
 - No changes, fix broken upload to Maven Central
 

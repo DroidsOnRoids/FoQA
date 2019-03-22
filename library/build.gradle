@@ -10,11 +10,11 @@ dependencies {
     implementation "com.willowtreeapps.hyperion:hyperion-geiger-counter:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
-    implementation "com.github.Commit451:Hyperion-Chuck:$versions.hyperionChuck"
     implementation "com.star_zero:hyperion-appinfo:$versions.hyperionAppInfo"
 
     implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 
     implementation project(':device_info_plugin')
     implementation project(':font_scale_plugin')
+    implementation project(':chuck_plugin')
 }

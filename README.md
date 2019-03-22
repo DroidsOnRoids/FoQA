@@ -15,25 +15,25 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.7'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.9'
 }
 ```
 
 If not already present add Maven Central repository:
 ```groovy
 repositories {
-    maven { url 'https://jitpack.io' }
+    mavenCentral()
 }
 ```
 
 ## Contents
 
 - [Hyperion](https://github.com/willowtreeapps/Hyperion-Android) with core plugins
-- [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
 - [Hyperion App Info](https://github.com/willowtreeapps/Hyperion-Android)
 - [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
 - Hyperion menu item with Device market name [Hyperion Device Info](#device-info-plugin)
 - Hyperion menu item with font scale changer [Hyperion Font Scale](#font-scale-plugin)
+- Hyperion menu item with Chuck launcher [Hyperion FoQA Chuck](#chuck-plugin)
 
 See [build.gradle](library/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
 
@@ -50,7 +50,7 @@ Shows device market name and Android version.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.7'
+    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.9'
 }
 ```
 
@@ -65,7 +65,21 @@ System settings write prompt will appear when setting scale for the first time.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.7'
+    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.9'
+}
+```
+### Chuck plugin
+
+Allows to quickly launch [Chuck](https://github.com/jgilfelt/chuck).
+Based on [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
+which cannot be used if FoQA is published to MavenCentral repo.
+We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenCentral](https://github.com/Commit451/Hyperion-Chuck/issues/1)    
+
+### Usage
+
+```groovy
+dependencies {
+    debugImplementation 'pl.droidsonroids.foqa:chuck:0.0.9'
 }
 ```
 

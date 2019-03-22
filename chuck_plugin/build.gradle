@@ -1,0 +1,5 @@
+group = GROUP
+
+dependencies {
+    implementation "com.readystatesoftware.chuck:library:$versions.chuck"
+}

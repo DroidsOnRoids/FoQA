@@ -73,7 +73,7 @@ dependencies {
 Allows to quickly launch [Chuck](https://github.com/jgilfelt/chuck).
 Based on [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
 which cannot be used if FoQA is published to MavenCentral repo.
-We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenCentral](https://github.com/Commit451/Hyperion-Chuck/issues/1)    
+We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenCentral](https://github.com/Commit451/Hyperion-Chuck/issues/1).    
 
 ### Usage
 

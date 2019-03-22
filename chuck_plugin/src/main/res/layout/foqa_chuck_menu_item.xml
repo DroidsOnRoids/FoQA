@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:drawableStart="@drawable/foqa_ic_perm_scan_wifi"
+    android:drawableLeft="@drawable/foqa_ic_perm_scan_wifi"
+    android:drawablePadding="28dp"
+    android:gravity="center_vertical|start"
+    android:minHeight="131dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/hype_plugin_padding"
+    android:text="@string/foqa_chuck_plugin_name"
+    android:textColor="@color/hype_plugin_color_selector"
+    android:textSize="16sp" />

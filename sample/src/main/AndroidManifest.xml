@@ -6,7 +6,6 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
         <activity android:name="android.app.Activity">
             <intent-filter>

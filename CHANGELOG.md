@@ -1,3 +1,9 @@
+### 0.0.10 - 16.04.2019
+- Gradle 5.3.1
+- Kotlin 1.3.30
+- Auto-service 1.0-rc5
+- Change Device Info plugin name reported to Hyperion to Android Device Info
+
 ### 0.0.9 - 22.03.2019
 - Gradle 5.3
 - Replace Hyperion Chuck with FoQA Chuck

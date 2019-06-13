@@ -1,5 +1,5 @@
 group = GROUP
 
 dependencies {
-    implementation "com.readystatesoftware.chuck:library:$versions.chuck"
+    implementation "pl.droidsonroids:chuck:$versions.chuck"
 }

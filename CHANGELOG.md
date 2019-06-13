@@ -1,3 +1,9 @@
+### 0.0.11 - 13.06.2019
+- Gradle 5.4.1
+- Kotlin 1.3.31
+- Android SDK (target and compile) 29
+- Replace upstream com.readystatesoftware.chuck:library by pl.droidsonroids:chuck
+
 ### 0.0.10 - 16.04.2019
 - Gradle 5.3.1
 - Kotlin 1.3.30

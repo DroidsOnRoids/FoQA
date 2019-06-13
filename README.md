@@ -15,7 +15,7 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.0.10'
+    debugImplementation 'com.github.droidsonroids:foqa:0.0.11'
 }
 ```
 
@@ -50,7 +50,7 @@ Shows device market name and Android version.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.10'
+    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.0.11'
 }
 ```
 
@@ -65,7 +65,7 @@ System settings write prompt will appear when setting scale for the first time.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.10'
+    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.0.11'
 }
 ```
 ### Chuck plugin
@@ -79,7 +79,7 @@ We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenC
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:chuck:0.0.10'
+    debugImplementation 'pl.droidsonroids.foqa:chuck:0.0.11'
 }
 ```
 

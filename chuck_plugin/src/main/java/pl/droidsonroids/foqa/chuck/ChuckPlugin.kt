@@ -18,7 +18,7 @@ internal class ChuckModule : PluginModule() {
     override fun createPluginView(layoutInflater: LayoutInflater, parent: ViewGroup): View {
         val view = layoutInflater.inflate(R.layout.foqa_chuck_menu_item, parent, false)
         view.setOnClickListener {
-            context.startActivity(Chuck.getLaunchIntent(context))
+            it.context.startActivity(Chuck.getLaunchIntent(it.context))
         }
         return view
     }

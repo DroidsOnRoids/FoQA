@@ -1,3 +1,9 @@
+### 0.0.12 - 10.07.2019
+- Gradle 5.5
+- Kotlin 1.3.41
+- Chuck 1.1.47
+- Use `Context` from `View` rather than from `Plugin` - fixes issues like [Hyperion-Android #179](https://github.com/willowtreeapps/Hyperion-Android/issues/179)
+
 ### 0.0.11 - 13.06.2019
 - Gradle 5.4.1
 - Kotlin 1.3.31

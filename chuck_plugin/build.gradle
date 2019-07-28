@@ -1,4 +1,5 @@
-group = GROUP
+androidPublish.artifactId = "chuck"
+description = "Hyperion plugin for menu item with Chuck - simple in-app HTTP inspector. Part of FoQA project."
 
 dependencies {
     implementation "pl.droidsonroids:chuck:$versions.chuck"

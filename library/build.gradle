@@ -1,3 +1,6 @@
+androidPublish.artifactId = "foqa"
+description = "Various Quality Assurance utilities to be included in QA/testing variants of Android apps"
+
 dependencies {
     implementation "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"

@@ -2,6 +2,7 @@ shipkit {
     gitHub.repository = "DroidsOnRoids/FoQA"
     gitHub.readOnlyAuthToken = System.getenv("GH_READ_TOKEN") ?: ""
     gitHub.writeAuthToken = System.getenv("GH_WRITE_TOKEN")
+    git.releasableBranchRegex = "develop|master|release/.+"
 }
 
 allprojects {

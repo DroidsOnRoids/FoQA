@@ -1,56 +1,67 @@
-### 0.0.14 - 10.07.2019
+#### 0.0.17
+ - 2019-07-31 - no code changes (no commits) - published to [![Bintray](https://img.shields.io/badge/Bintray-0.0.17-green.svg)](https://bintray.com/droidsonroids/maven/FoQA/0.0.17)
+
+#### 0.0.16
+ - 2019-07-29 - no code changes (no commits) - published to [![Bintray](https://img.shields.io/badge/Bintray-0.0.16-green.svg)](https://bintray.com/droidsonroids/maven/FoQA/0.0.16)
+
+#### 0.0.15
+ - 2019-07-28 - 40 commits by [Karol Wrótniak](https://github.com/koral--) - published to [![Bintray](https://img.shields.io/badge/Bintray-0.0.15-green.svg)](https://bintray.com/droidsonroids/maven/FoQA/0.0.15)
+ - Add separate plugins to readme [(#7)](https://github.com/DroidsOnRoids/FoQA/pull/7)
+ - Font scale [(#6)](https://github.com/DroidsOnRoids/FoQA/pull/6)
+
+#### 0.0.14 - 10.07.2019
 - Gradle 5.5
 - Kotlin 1.3.41
 - Chuck 1.1.47
 - Use `Context` from `View` rather than from `Plugin` - fixes issues like [Hyperion-Android #179](https://github.com/willowtreeapps/Hyperion-Android/issues/179)
 
-### 0.0.11 - 13.06.2019
+#### 0.0.11 - 13.06.2019
 - Gradle 5.4.1
 - Kotlin 1.3.31
 - Android SDK (target and compile) 29
 - Replace upstream com.readystatesoftware.chuck:library by pl.droidsonroids:chuck
 
-### 0.0.10 - 16.04.2019
+#### 0.0.10 - 16.04.2019
 - Gradle 5.3.1
 - Kotlin 1.3.30
 - Auto-service 1.0-rc5
 - Change Device Info plugin name reported to Hyperion to Android Device Info
 
-### 0.0.9 - 22.03.2019
+#### 0.0.9 - 22.03.2019
 - Gradle 5.3
 - Replace Hyperion Chuck with FoQA Chuck
 
-### 0.0.8 - 13.03.2019
+#### 0.0.8 - 13.03.2019
 - No changes, fix broken upload to Maven Central
 
-### 0.0.7 - 11.03.2019
+#### 0.0.7 - 11.03.2019
 - Add default font scale value for case when settings does not exist
 
-### 0.0.6 - 05.03.2019
+#### 0.0.6 - 05.03.2019
 - Android Gradle Plugin 3.3.2
 - Open directly ACTION_MANAGE_WRITE_SETTINGS for given app
 - Add minimum API level (24) restriction to font scale plugin 
 
-### 0.0.5 - 04.03.2019
+#### 0.0.5 - 04.03.2019
 - Fix error message in Font scale plugin when system settings write management is not available
 
-### 0.0.4 - 04.03.2019
+#### 0.0.4 - 04.03.2019
 - Android Debug Database 1.0.5
 - Unify menu item style
 - Extract Device info plugin to separate artifact, remove simple menu item dependency
 - Add Font scale plugin
 
-### 0.0.3 - 11.02.2019
+#### 0.0.3 - 11.02.2019
 - Add device market name menu item icon
 
-### 0.0.2 - 07.02.2019
+#### 0.0.2 - 07.02.2019
 - Hyperion Chuck 1.0.0
 - Hyperion App Info 1.0.0
 - Hyperion Simple Item 0.4.0
 - Android Gradle Plugin 3.3.1
 - Add device market name menu item
 
-### 0.0.1 - 04.02.2019
+#### 0.0.1 - 04.02.2019
 - Initial release
 - Hyperion 0.9.27
 - Android Debug Database 1.0.4

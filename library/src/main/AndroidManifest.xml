@@ -1,1 +1,11 @@
-<manifest package="pl.droidsonroids.foqa"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.droidsonroids.foqa">
+
+    <application>
+        <provider
+            android:name=".HyperionDisableProvider"
+            android:authorities="${applicationId}.hyperionDisableProvider"
+            android:exported="false"
+            android:initOrder="-2147483648" />
+    </application>
+</manifest>

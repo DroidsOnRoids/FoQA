@@ -10,6 +10,6 @@
     android:minHeight="131dp"
     android:orientation="horizontal"
     android:padding="@dimen/hype_plugin_padding"
-    android:text="@string/foqa_chuck_plugin_name"
+    android:text="@string/foqa_chucker_plugin_name"
     android:textColor="@color/hype_plugin_color_selector"
     android:textSize="16sp" />

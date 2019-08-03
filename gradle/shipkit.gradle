@@ -6,6 +6,8 @@ shipkit {
     releaseNotes.file = 'CHANGELOG.md'
     git.user = 'faultlessdroid'
     git.email = '<opensource@droidsonroids.pl>'
+    team.developers = ['koral--:Karol Wrótniak']
+    team.ignoredContributors = ['shipkit-org']
 }
 
 allprojects {

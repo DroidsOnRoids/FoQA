@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="foqa_chuck_plugin_name">Chuck</string>
+    <string name="foqa_chucker_plugin_name">Chucker</string>
 </resources>

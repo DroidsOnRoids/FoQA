@@ -19,5 +19,5 @@ dependencies {
 
     implementation project(':device_info_plugin')
     implementation project(':font_scale_plugin')
-    implementation project(':chuck_plugin')
+    implementation project(':chucker_plugin')
 }

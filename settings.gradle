@@ -1,1 +1,1 @@
-include ':library', ':device_info_plugin', ':font_scale_plugin', ':chuck_plugin', ':sample'
+include ':library', ':device_info_plugin', ':font_scale_plugin', ':chucker_plugin', ':sample'

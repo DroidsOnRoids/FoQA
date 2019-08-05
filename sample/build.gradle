@@ -3,12 +3,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion versions.compileSdk
     defaultConfig {
-        applicationId "pl.droidsonroids.foqa.sample"
+        applicationId 'pl.droidsonroids.foqa.sample'
         minSdkVersion 16
         targetSdkVersion versions.targetSdk
     }
 }
 
 dependencies {
-    implementation project(':library')
+    implementation project(':foqa')
 }

@@ -12,18 +12,14 @@ internal class FontScaleModule : PluginModule() {
 
     private lateinit var fontScaleInteractor: FontScaleInteractor
 
-    override fun onCreate() {
-        super.onCreate()
-        fontScaleInteractor = FontScaleInteractor(context)
-    }
-
     override fun createPluginView(layoutInflater: LayoutInflater, parent: ViewGroup): View {
         val view = layoutInflater.inflate(R.layout.foqa_font_scale_menu_item, parent, false)
         val seekBar = view.findViewById<SeekBar>(R.id.fontScaleSeekBar)
         val valueTextView = view.findViewById<TextView>(R.id.fontScaleValue)
+        fontScaleInteractor = FontScaleInteractor(view.context)
 
         fun showFontScale(scale: Float) {
-            valueTextView.text = context.getString(R.string.foqa_font_scale_value, scale)
+            valueTextView.text = view.context.getString(R.string.foqa_font_scale_value, scale)
             valueTextView.scaleX = scale
             valueTextView.scaleY = scale
             seekBar.progress = scale.toSeekBarValue()

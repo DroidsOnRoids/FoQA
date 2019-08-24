@@ -14,6 +14,7 @@ dependencies {
     implementation "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
     implementation "com.star_zero:hyperion-appinfo:$versions.hyperionAppInfo"
+    api "com.github.ChuckerTeam.Chucker:library:$versions.chucker"
 
     implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 

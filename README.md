@@ -1,5 +1,6 @@
 # FoQA
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa)
 <img src="art/seal.svg" alt="Logo" width="200"/>
 
 Container for various Quality Assurance utilities to be included in QA/testing variants of Android apps.
@@ -15,9 +16,10 @@ Add FoQA dependency to `build.gradle` of the application module:
 
 ```groovy
 dependencies {
-    debugImplementation 'com.github.droidsonroids:foqa:0.1.4'
+    debugImplementation 'pl.droidsonroids.foqa:foqa:<latest version>'
 }
 ```
+Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa)
 
 If not already present add Maven Central repository:
 ```groovy
@@ -50,9 +52,11 @@ Shows device market name and Android version.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:0.1.4'
+    debugImplementation 'pl.droidsonroids.foqa:deviceinfo:<latest version>'
 }
 ```
+
+Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/deviceinfo/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/deviceinfo)
 
 ### Font Scale plugin
 
@@ -65,9 +69,12 @@ System settings write prompt will appear when setting scale for the first time.
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:fontscale:0.1.4'
+    debugImplementation 'pl.droidsonroids.foqa:fontscale:<latest version>'
 }
 ```
+
+Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale)
+
 ### Chuck plugin
 
 Allows to quickly launch [Chuck](https://github.com/jgilfelt/chuck).
@@ -79,10 +86,12 @@ We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenC
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:chuck:0.1.4'
+    debugImplementation 'pl.droidsonroids.foqa:chuck:<latest version>'
 }
 ```
 
+Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chuck/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chuck)
+
 ## License
 
-MIT License
+[MIT License](/LICENSE)

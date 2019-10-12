@@ -1,1 +1,5 @@
-<manifest package="pl.droidsonroids.foqa.chucker" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.droidsonroids.foqa.chucker">
+
+    <application android:supportsRtl="true" />
+</manifest>

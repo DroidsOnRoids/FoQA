@@ -7,6 +7,17 @@ android {
         minSdkVersion 16
         targetSdkVersion versions.targetSdk
     }
+
+    lintOptions {
+        checkDependencies true
+        setXmlOutput(rootProject.file("build/reports/lint/lint-results.xml"))
+    }
+
+    buildTypes {
+        debug {
+            matchingFallbacks = ["release"]
+        }
+    }
 }
 
 dependencies {

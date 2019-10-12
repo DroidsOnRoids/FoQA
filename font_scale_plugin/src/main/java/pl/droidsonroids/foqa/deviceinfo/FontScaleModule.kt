@@ -48,7 +48,6 @@ internal class FontScaleModule : PluginModule() {
                     seekBar.progress = fontScaleInteractor.systemFontScale.toSeekBarValue()
                 }
             }
-
         })
 
         return view

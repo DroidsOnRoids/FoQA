@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pl.droidsonroids.foqa">
 
-    <application>
+    <application android:supportsRtl="true">
         <provider
             android:name=".HyperionDisableProvider"
             android:authorities="${applicationId}.hyperionDisableProvider"

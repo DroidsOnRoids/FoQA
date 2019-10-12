@@ -22,7 +22,9 @@ class HyperionDisableProvider : ContentProvider() {
         }
     }
 
-    private fun isRunningOnFirebaseTestLab(context: Context) = Settings.System.getString(context.contentResolver, "firebase.test.lab") == "true"
+    private fun isRunningOnFirebaseTestLab(context: Context): Boolean {
+        return Settings.System.getString(context.contentResolver, "firebase.test.lab") == "true"
+    }
 
     private fun disableHyperion(context: Context) {
         val hyperionInitProvider = ComponentName(context, HyperionInitProvider::class.java)
@@ -31,9 +33,20 @@ class HyperionDisableProvider : ContentProvider() {
 
     override fun insert(uri: Uri, values: ContentValues?): Nothing? = null
 
-    override fun query(uri: Uri, projection: Array<String>?, selection: String?, selectionArgs: Array<String>?, sortOrder: String?): Nothing? = null
+    override fun query(
+        uri: Uri,
+        projection: Array<String>?,
+        selection: String?,
+        selectionArgs: Array<String>?,
+        sortOrder: String?
+    ): Nothing? = null
 
-    override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<String>?) = 0
+    override fun update(
+        uri: Uri,
+        values: ContentValues?,
+        selection: String?,
+        selectionArgs: Array<String>?
+    ) = 0
 
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?) = 0
 

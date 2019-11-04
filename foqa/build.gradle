@@ -2,23 +2,23 @@ androidPublish.artifactId = 'foqa'
 description = "Various Quality Assurance utilities to be included in QA/testing variants of Android apps"
 
 dependencies {
-    implementation "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-measurement:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-disk:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-recorder:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-phoenix:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-crash:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-shared-preferences:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-geiger-counter:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
-    implementation "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
-    implementation "com.star_zero:hyperion-appinfo:$versions.hyperionAppInfo"
+    api "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-measurement:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-disk:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-recorder:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-phoenix:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-crash:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-shared-preferences:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-geiger-counter:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-timber:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-build-config:$versions.hyperion"
+    api "com.star_zero:hyperion-appinfo:$versions.hyperionAppInfo"
     api "com.github.ChuckerTeam.Chucker:library:$versions.chucker"
 
     implementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 
-    implementation project(':device_info_plugin')
-    implementation project(':font_scale_plugin')
-    implementation project(':chucker_plugin')
+    api project(':device_info_plugin')
+    api project(':font_scale_plugin')
+    api project(':chucker_plugin')
 }

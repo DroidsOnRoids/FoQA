@@ -26,14 +26,14 @@ GEM
       no_proxy_fix
       octokit (~> 4.7)
       terminal-table (~> 1)
-    danger-android_lint (0.0.7)
+    danger-android_lint (0.0.8)
       danger-plugin-api (~> 1.0)
       oga
     danger-kotlin_detekt (0.0.3)
       danger-plugin-api (~> 1.0)
     danger-plugin-api (1.0.0)
       danger (> 2.0)
-    faraday (0.17.0)
+    faraday (0.17.1)
       multipart-post (>= 1.2, < 3)
     faraday-http-cache (2.0.0)
       faraday (~> 0.8)
@@ -46,11 +46,11 @@ GEM
     no_proxy_fix (0.1.2)
     octokit (4.14.0)
       sawyer (~> 0.8.0, >= 0.5.3)
-    oga (2.15)
+    oga (3.0)
       ast
       ruby-ll (~> 2.1)
     open4 (1.3.4)
-    public_suffix (4.0.1)
+    public_suffix (4.0.2)
     ruby-ll (2.1.2)
       ansi
       ast

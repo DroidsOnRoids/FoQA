@@ -8,7 +8,7 @@ buildscript {
             versionsPlugin     : '0.27.0',
             hyperion           : '0.9.27',
             debugDb            : '1.0.6',
-            chucker            : '3.0.1',
+            chucker            : '3.1.0',
             hyperionAppInfo    : '1.1.0',
             deviceNames        : '1.1.9',
             autoService        : '1.0-rc6',

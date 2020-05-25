@@ -37,7 +37,7 @@ internal class FontScaleModule : PluginModule() {
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {
-                fontScaleInteractor.ensureSystemSettingsWritability()
+                fontScaleInteractor.ensureSystemSettingsWritable()
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar) {

@@ -21,7 +21,7 @@ internal class FontScaleInteractor(private val context: Context) {
     val isSystemSettingsWritable
         get() = Build.VERSION.SDK_INT < Build.VERSION_CODES.M || Settings.System.canWrite(context)
 
-    fun ensureSystemSettingsWritability() {
+    fun ensureSystemSettingsWritable() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.System.canWrite(context)) {
             startSystemSettingsActivity()
         }

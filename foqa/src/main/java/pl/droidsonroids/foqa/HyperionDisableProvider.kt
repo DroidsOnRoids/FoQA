@@ -11,7 +11,7 @@ import android.net.Uri
 import android.provider.Settings
 import com.willowtreeapps.hyperion.core.internal.HyperionInitProvider
 
-class HyperionDisableProvider : ContentProvider() {
+internal class HyperionDisableProvider : ContentProvider() {
 
     override fun onCreate() = true
 
@@ -22,13 +22,16 @@ class HyperionDisableProvider : ContentProvider() {
         }
     }
 
-    private fun isRunningOnFirebaseTestLab(context: Context): Boolean {
-        return Settings.System.getString(context.contentResolver, "firebase.test.lab") == "true"
-    }
+    private fun isRunningOnFirebaseTestLab(context: Context) =
+        Settings.System.getString(context.contentResolver, "firebase.test.lab") == "true"
 
     private fun disableHyperion(context: Context) {
         val hyperionInitProvider = ComponentName(context, HyperionInitProvider::class.java)
-        context.packageManager.setComponentEnabledSetting(hyperionInitProvider, COMPONENT_ENABLED_STATE_DISABLED, DONT_KILL_APP)
+        context.packageManager.setComponentEnabledSetting(
+            hyperionInitProvider,
+            COMPONENT_ENABLED_STATE_DISABLED,
+            DONT_KILL_APP
+        )
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Nothing? = null

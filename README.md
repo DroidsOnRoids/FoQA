@@ -19,6 +19,11 @@ dependencies {
     debugImplementation 'pl.droidsonroids.foqa:foqa:<latest version>'
 }
 ```
+```kotlin
+dependencies {
+    debugImplementation("pl.droidsonroids.foqa:foqa:<latest version>")
+}
+```
 Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/foqa)
 
 If not already present add Maven Central repository:
@@ -56,6 +61,12 @@ dependencies {
 }
 ```
 
+```kotlin
+dependencies {
+    debugImplementation("pl.droidsonroids.foqa:deviceinfo:<latest version>")
+}
+```
+
 Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/deviceinfo/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/deviceinfo)
 
 ### Font Scale plugin
@@ -73,6 +84,12 @@ dependencies {
 }
 ```
 
+```kotlin
+dependencies {
+    debugImplementation("pl.droidsonroids.foqa:fontscale:<latest version>")
+}
+```
+
 Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale)
 
 ### Chuck plugin
@@ -87,6 +104,12 @@ We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenC
 ```groovy
 dependencies {
     debugImplementation 'pl.droidsonroids.foqa:chuck:<latest version>'
+}
+```
+
+```kotlin
+dependencies {
+    debugImplementation("pl.droidsonroids.foqa:chuck:<latest version>")
 }
 ```
 

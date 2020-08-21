@@ -9,6 +9,7 @@ android {
 
 dependencies {
     api "com.willowtreeapps.hyperion:hyperion-core:$versions.hyperion"
+    api "com.willowtreeapps.hyperion:hyperion-plugin:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-attr:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-measurement:$versions.hyperion"
     implementation "com.willowtreeapps.hyperion:hyperion-disk:$versions.hyperion"

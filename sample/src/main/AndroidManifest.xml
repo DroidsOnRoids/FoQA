@@ -4,6 +4,7 @@
     package="pl.droidsonroids.foqa.sample">
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">

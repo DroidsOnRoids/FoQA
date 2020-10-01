@@ -6,6 +6,7 @@ android {
         applicationId 'pl.droidsonroids.foqa.sample'
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
+        multiDexEnabled true
     }
 
     lintOptions {
@@ -22,4 +23,5 @@ android {
 
 dependencies {
     implementation project(':foqa')
+    implementation "androidx.multidex:multidex:$versions.multidex"
 }

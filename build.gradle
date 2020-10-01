@@ -14,7 +14,8 @@ buildscript {
             autoService        : '1.0-rc7',
             shipkit            : '2.3.0',
             detekt             : '1.11.1',
-            androidxAnnotations: '1.2.0-alpha01'
+            androidxAnnotations: '1.2.0-alpha01',
+            multidex           : '2.0.1',
     ]
 
     repositories {

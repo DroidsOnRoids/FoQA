@@ -18,7 +18,7 @@ internal class ChuckerModule : PluginModule() {
     override fun createPluginView(layoutInflater: LayoutInflater, parent: ViewGroup): View {
         val view = layoutInflater.inflate(R.layout.foqa_chucker_menu_item, parent, false)
         view.setOnClickListener {
-            it.context.startActivity(Chucker.getLaunchIntent(it.context, Chucker.SCREEN_HTTP))
+            it.context.startActivity(Chucker.getLaunchIntent(it.context))
         }
         return view
     }

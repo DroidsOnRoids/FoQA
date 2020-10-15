@@ -4,9 +4,9 @@ buildscript {
             compileSdk         : 30,
             targetSdk          : 30,
             kotlin             : '1.4.10',
-            androidGradlePlugin: '4.2.0-alpha12',
+            androidGradlePlugin: '4.2.0-alpha13',
             versionsPlugin     : '0.29.0',
-            hyperion           : '0.9.29',
+            hyperion           : '0.9.30',
             debugDb            : '1.0.6',
             chucker            : '3.3.0',
             hyperionAppInfo    : '1.1.0',
@@ -34,7 +34,7 @@ buildscript {
 }
 
 plugins {
-    id 'io.gitlab.arturbosch.detekt' version "1.1.0"
+    id 'io.gitlab.arturbosch.detekt' version "1.14.1"
 }
 
 apply plugin: 'org.shipkit.java'
@@ -49,11 +49,6 @@ repositories {
     jcenter()
 }
 
-buildScan {
-    termsOfServiceUrl = "https://gradle.com/terms-of-service"
-    termsOfServiceAgree = "yes"
-}
-
 detekt {
     input = files(projectDir)
     config = rootProject.files("detekt-config.yml")
@@ -65,7 +60,7 @@ tasks.withType(io.gitlab.arturbosch.detekt.Detekt) {
     parallel = true
     reports {
         xml.enabled = true
-        html.enabled = true
+        html.enabled = false
         txt.enabled = false
     }
 }

@@ -64,14 +64,19 @@ tasks.withType(io.gitlab.arturbosch.detekt.Detekt) {
         txt.enabled = false
     }
 }
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += ['-Xexplicit-api=strict']
+    }
+}
 
 subprojects { subproject ->
 
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://www.jitpack.io' }
         jcenter()
-        maven { url 'https://jitpack.io' }
     }
 
     apply plugin: 'com.github.ben-manes.versions'

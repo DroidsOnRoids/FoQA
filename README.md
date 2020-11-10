@@ -92,28 +92,26 @@ dependencies {
 
 Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/fontscale)
 
-### Chuck plugin
+### Chucker plugin
 
-Allows to quickly launch [Chuck](https://github.com/jgilfelt/chuck).
+Allows to quickly launch [Chucker](https://github.com/ChuckerTeam/chucker).
 Based on [Hyperion Chuck](https://github.com/Commit451/Hyperion-Chuck)
-which cannot be used if FoQA is published to MavenCentral repo.
-We'll deprecate this plugin after Hyperion Chuck becomes [compatible with MavenCentral](https://github.com/Commit451/Hyperion-Chuck/issues/1).    
 
 ### Usage
 
 ```groovy
 dependencies {
-    debugImplementation 'pl.droidsonroids.foqa:chuck:<latest version>'
+    debugImplementation 'pl.droidsonroids.foqa:chucker:<latest version>'
 }
 ```
 
 ```kotlin
 dependencies {
-    debugImplementation("pl.droidsonroids.foqa:chuck:<latest version>")
+    debugImplementation("pl.droidsonroids.foqa:chucker:<latest version>")
 }
 ```
 
-Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chuck/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chuck)
+Latest version number: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chucker/badge.svg)](https://maven-badges.herokuapp.com/maven-central/pl.droidsonroids.foqa/chucker)
 
 ## License
 

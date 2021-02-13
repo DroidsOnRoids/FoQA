@@ -40,7 +40,7 @@ repositories {
 - [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
 - Hyperion menu item with Device market name [Hyperion Device Info](#device-info-plugin)
 - Hyperion menu item with font scale changer [Hyperion Font Scale](#font-scale-plugin)
-- Hyperion menu item with Chuck launcher [Hyperion FoQA Chuck](#chuck-plugin)
+- Hyperion menu item with Chucker launcher [Hyperion FoQA Chucker](#chucker-plugin)
 
 See [build.gradle](foqa/build.gradle) for a complete list of components. And [build.gradle](build.gradle) for versions.
 

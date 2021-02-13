@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import pl.droidsonroids.foqa.fontscale.R
@@ -30,12 +31,17 @@ internal class FontScaleInteractor(private val context: Context) {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun startSystemSettingsActivity() {
         val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                .setData(Uri.parse("package:" + context.packageName))
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            .setData(Uri.parse("package:" + context.packageName))
         try {
             context.startActivity(intent)
         } catch (e: ActivityNotFoundException) {
-            Toast.makeText(context, R.string.foqa_font_scale_system_settings_disabled, Toast.LENGTH_SHORT).show()
+            Log.w("FoQA", e)
+            Toast.makeText(
+                context,
+                R.string.foqa_font_scale_system_settings_disabled,
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }

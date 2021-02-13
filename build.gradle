@@ -1,10 +1,12 @@
+import io.gitlab.arturbosch.detekt.Detekt
+
 buildscript {
     ext.versions = [
             minSdk             : 16,
             compileSdk         : 30,
             targetSdk          : 30,
-            kotlin             : '1.4.21',
-            androidGradlePlugin: '7.0.0-alpha04',
+            kotlin             : '1.4.30',
+            androidGradlePlugin: '7.0.0-alpha06',
             versionsPlugin     : '0.29.0',
             hyperion           : '0.9.31',
             debugDb            : '1.0.6',
@@ -14,14 +16,13 @@ buildscript {
             autoService        : '1.0-rc7',
             shipkit            : '2.3.0',
             detekt             : '1.11.1',
-            androidxAnnotations: '1.2.0-alpha01',
+            androidxAnnotations: '1.2.0-beta01',
             multidex           : '2.0.1',
     ]
 
     repositories {
         google()
         mavenCentral()
-        jcenter()
         gradlePluginPortal()
     }
 
@@ -34,7 +35,7 @@ buildscript {
 }
 
 plugins {
-    id 'io.gitlab.arturbosch.detekt' version "1.14.1"
+    id 'io.gitlab.arturbosch.detekt' version "1.16.0-RC1"
 }
 
 apply plugin: 'org.shipkit.java'
@@ -54,7 +55,7 @@ detekt {
     config = rootProject.files("detekt-config.yml")
 }
 
-tasks.withType(io.gitlab.arturbosch.detekt.Detekt) {
+tasks.withType(Detekt) {
     exclude("build/")
     exclude("buildSrc/build/")
     parallel = true

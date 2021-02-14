@@ -7,6 +7,7 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
+        maven("https://dl.bintray.com/kotlin/kotlinx/")
     }
 
     dependencies {
@@ -57,7 +58,6 @@ subprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
-        maven("https://dl.bintray.com/kotlin/kotlinx/")
     }
 
     group = "pl.droidsonroids.foqa"

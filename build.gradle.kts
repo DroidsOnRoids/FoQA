@@ -3,20 +3,6 @@ import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val androidGradlePlugin = "com.android.tools.build:gradle:7.0.0-alpha06"
-    val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30"
-//            kotlin             : '1.4.30',
-//            hyperion           : '0.9.31',
-//            debugDb            : '1.0.6',
-//            chucker            : '3.4.0',
-//            hyperionAppInfo    : '1.1.0',
-//            deviceNames        : '2.0.0',
-//            autoService        : '1.0-rc7',
-//            shipkit            : '2.3.0',
-//            detekt             : '1.11.1',
-//            androidxAnnotations: '1.2.0-beta01',
-//            multidex           : '2.0.1',
-//    ]
     repositories {
         google()
         mavenCentral()
@@ -24,8 +10,8 @@ buildscript {
     }
 
     dependencies {
-        classpath(androidGradlePlugin)
-        classpath(kotlinGradlePlugin)
+        classpath(Dependencies.androidGradlePlugin)
+        classpath(Dependencies.kotlinGradlePlugin)
     }
 }
 
@@ -71,6 +57,7 @@ subprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        maven("https://dl.bintray.com/kotlin/kotlinx/")
     }
 
     group = "pl.droidsonroids.foqa"

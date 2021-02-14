@@ -1,5 +1,6 @@
 import com.android.build.gradle.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     val androidGradlePlugin = "com.android.tools.build:gradle:7.0.0-alpha06"
@@ -56,6 +57,12 @@ tasks.withType(Detekt::class) {
         xml.enabled = true
         html.enabled = false
         txt.enabled = false
+    }
+}
+
+tasks.withType(KotlinCompile::class).all {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xexplicit-api=strict")
     }
 }
 

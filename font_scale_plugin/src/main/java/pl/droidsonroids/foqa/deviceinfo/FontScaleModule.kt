@@ -7,10 +7,11 @@ import android.widget.SeekBar
 import android.widget.TextView
 import com.willowtreeapps.hyperion.plugin.v1.PluginModule
 import pl.droidsonroids.foqa.fontscale.R
+import kotlin.properties.Delegates
 
 internal class FontScaleModule : PluginModule() {
 
-    private lateinit var fontScaleInteractor: FontScaleInteractor
+    private var fontScaleInteractor: FontScaleInteractor by Delegates.notNull()
 
     override fun createPluginView(layoutInflater: LayoutInflater, parent: ViewGroup): View {
         val view = layoutInflater.inflate(R.layout.foqa_font_scale_menu_item, parent, false)

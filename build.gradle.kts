@@ -7,7 +7,6 @@ buildscript {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven("https://dl.bintray.com/kotlin/kotlinx/")
     }
 
     dependencies {
@@ -22,13 +21,14 @@ plugins {
     id("com.github.ben-manes.versions") version ("0.36.0")
 }
 
+repositories {
+    mavenCentral()
+    maven("https://dl.bintray.com/kotlin/kotlinx/")
+}
+
 dependencies {
     detekt(Dependencies.detektFormatting)
     detekt(Dependencies.detektCli)
-}
-
-repositories {
-    mavenCentral()
 }
 
 detekt {

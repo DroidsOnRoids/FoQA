@@ -80,7 +80,7 @@ complexity:
     ignoreNestingFunctions: false
     nestingFunctions: [run, let, apply, with, also, use, forEach, isNotNull, ifNull]
   LabeledExpression:
-    active: true
+    active: false
     ignoredLabels: []
   LargeClass:
     active: true
@@ -384,6 +384,7 @@ naming:
     ignoreOverridden: true
   InvalidPackageDeclaration:
     active: true
+    excludes: [ '**/*.kts', '**/buildSrc/**/*.kt' ]
     rootPackage: ''
   MatchingDeclarationName:
     active: true
@@ -541,7 +542,7 @@ style:
   LibraryCodeMustSpecifyReturnType:
     active: true
   LibraryEntitiesShouldNotBePublic:
-    active: true
+    active: false
   LoopWithTooManyJumpStatements:
     active: true
     maxJumpCount: 1

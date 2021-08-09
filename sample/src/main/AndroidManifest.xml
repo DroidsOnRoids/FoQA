@@ -8,7 +8,9 @@
         android:allowBackup="true"
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,MissingApplicationIcon">
-        <activity android:name="android.app.Activity">
+        <activity
+            android:name="android.app.Activity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

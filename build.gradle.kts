@@ -16,9 +16,8 @@ buildscript {
 }
 
 plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.16.0-RC1"
-    id("org.shipkit.java") version "2.3.5"
-    id("com.github.ben-manes.versions") version "0.36.0"
+    id("io.gitlab.arturbosch.detekt") version "1.18.0-RC3"
+    id("com.github.ben-manes.versions") version "0.39.0"
 }
 
 repositories {
@@ -32,7 +31,7 @@ dependencies {
 }
 
 detekt {
-    input = files(projectDir)
+    source = files(projectDir)
     config = rootProject.files("detekt-config.yml")
 }
 
@@ -69,14 +68,12 @@ subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
     apply(plugin = "kotlin-kapt")
-    apply(plugin = "org.shipkit.bintray")
-    apply(plugin = "org.shipkit.android-publish")
 
     with(extensions.getByName("android") as LibraryExtension) {
-        compileSdkVersion(Dependencies.compileSdk)
+        compileSdk = Dependencies.compileSdk
         defaultConfig {
-            setMinSdkVersion(Dependencies.minSdk)
-            setTargetSdkVersion(Dependencies.targetSdk)
+            minSdk = Dependencies.minSdk
+            targetSdk = Dependencies.targetSdk
         }
 
         resourcePrefix = "foqa_"

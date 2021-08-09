@@ -1,5 +1,6 @@
-androidPublish.artifactId = "chucker"
-description = "Hyperion plugin for menu item with Chuckuer - simple in-app HTTP inspector. Part of FoQA project."
+// androidPublish.artifactId = "chucker"
+description =
+    "Hyperion plugin for menu item with Chucker - simple in-app HTTP inspector. Part of FoQA project."
 
 dependencies {
     api(Dependencies.chucker)

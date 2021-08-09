@@ -1,6 +1,7 @@
 import com.android.build.gradle.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.shipkit.changelog.GenerateChangelogTask
 
 buildscript {
     repositories {
@@ -18,6 +19,8 @@ buildscript {
 plugins {
     id("io.gitlab.arturbosch.detekt") version "1.18.0-RC3"
     id("com.github.ben-manes.versions") version "0.39.0"
+    id("org.shipkit.shipkit-changelog") version "1.1.15"
+    id("org.shipkit.shipkit-auto-version") version "1.1.19"
 }
 
 repositories {
@@ -33,6 +36,15 @@ dependencies {
 detekt {
     source = files(projectDir)
     config = rootProject.files("detekt-config.yml")
+}
+
+tasks {
+    withType(GenerateChangelogTask::class) {
+        previousRevision = "v0.1.24" // project.ext.'shipkit-auto-version.previous-tag'
+        githubToken = System.getenv("GH_READ_TOKEN")
+        repository = "DroidsOnRoids/FoQA"
+        outputFile = file("CHANGELOG.md")
+    }
 }
 
 tasks.withType(Detekt::class) {

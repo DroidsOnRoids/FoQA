@@ -2,6 +2,7 @@ import com.android.build.gradle.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.shipkit.changelog.GenerateChangelogTask
+import org.shipkit.github.release.GithubReleaseTask
 
 buildscript {
     repositories {
@@ -20,6 +21,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.18.0-RC3"
     id("com.github.ben-manes.versions") version "0.39.0"
     id("org.shipkit.shipkit-changelog") version "1.1.15"
+    id("org.shipkit.shipkit-github-release") version "1.1.15"
     id("org.shipkit.shipkit-auto-version") version "1.1.19"
 }
 
@@ -40,27 +42,30 @@ detekt {
 
 tasks {
     withType(GenerateChangelogTask::class) {
-        previousRevision = "v0.1.24" // project.ext.'shipkit-auto-version.previous-tag'
+        previousRevision = project.ext["shipkit-auto-version.previous-tag"] as String
         githubToken = System.getenv("GH_READ_TOKEN")
         repository = "DroidsOnRoids/FoQA"
-        outputFile = file("CHANGELOG.md")
     }
-}
-
-tasks.withType(Detekt::class) {
-    exclude("build/")
-    exclude("buildSrc/build/")
-    parallel = true
-    reports {
-        xml.enabled = true
-        html.enabled = false
-        txt.enabled = false
+    withType(GithubReleaseTask::class) {
+        repository = "DroidsOnRoids/FoQA"
+        changelog = File(buildDir, "changelog.md")
+        githubToken = System.getenv("GH_WRITE_TOKEN")
+        newTagRevision = System.getenv("BITRISE_GIT_COMMIT")
     }
-}
-
-tasks.withType(KotlinCompile::class).all {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xexplicit-api=strict")
+    withType(Detekt::class) {
+        exclude("build/")
+        exclude("buildSrc/build/")
+        parallel = true
+        reports {
+            xml.enabled = true
+            html.enabled = false
+            txt.enabled = false
+        }
+    }
+    withType(KotlinCompile::class).all {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xexplicit-api=strict")
+        }
     }
 }
 

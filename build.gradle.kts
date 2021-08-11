@@ -14,6 +14,7 @@ buildscript {
     dependencies {
         classpath(Dependencies.androidGradlePlugin)
         classpath(Dependencies.kotlinGradlePlugin)
+        classpath(Dependencies.publishGradlePlugin)
     }
 }
 
@@ -85,6 +86,7 @@ subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
     apply(plugin = "kotlin-kapt")
+    apply(plugin = "com.vanniktech.maven.publish")
 
     with(extensions.getByName("android") as LibraryExtension) {
         compileSdk = Dependencies.compileSdk

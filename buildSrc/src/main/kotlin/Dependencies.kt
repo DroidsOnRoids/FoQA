@@ -25,6 +25,7 @@ object Dependencies {
     const val deviceNames = "com.jaredrummler:android-device-names:2.0.0"
     const val debugDb = "com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.6"
     const val multidex = "androidx.multidex:multidex:2.0.1"
-    const val androidGradlePlugin = "com.android.tools.build:gradle:7.1.0-alpha06"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:7.1.0-alpha07"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30-RC"
+    const val publishGradlePlugin = "com.vanniktech:gradle-maven-publish-plugin:0.17.0"
 }

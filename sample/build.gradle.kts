@@ -3,23 +3,23 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Dependencies.compileSdk)
+    compileSdk = Dependencies.compileSdk
     defaultConfig {
         versionCode = 1
         applicationId = "pl.droidsonroids.foqa.sample"
-        minSdkVersion(Dependencies.minSdk)
-        targetSdkVersion(Dependencies.targetSdk)
+        minSdk = Dependencies.minSdk
+        targetSdk = Dependencies.targetSdk
         multiDexEnabled = true
     }
 
-    lintOptions {
-        isCheckDependencies = true
+    lint {
+        checkDependencies = true
         xmlOutput = rootProject.file("build/reports/lint/lint-results.xml")
     }
 
     buildTypes {
         named("debug") {
-            setMatchingFallbacks("release")
+            matchingFallbacks += "release"
         }
     }
 }

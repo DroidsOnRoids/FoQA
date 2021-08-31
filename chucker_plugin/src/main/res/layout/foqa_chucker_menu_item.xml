@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:drawableStart="@drawable/foqa_ic_perm_scan_wifi"
-    android:drawableLeft="@drawable/foqa_ic_perm_scan_wifi"
     android:drawablePadding="28dp"
     android:gravity="center_vertical|start"
     android:minHeight="131dp"

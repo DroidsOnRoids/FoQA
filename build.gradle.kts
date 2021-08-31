@@ -1,6 +1,8 @@
 import com.android.build.gradle.LibraryExtension
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.shipkit.changelog.GenerateChangelogTask
+import org.shipkit.github.release.GithubReleaseTask
 
 buildscript {
     repositories {
@@ -12,13 +14,16 @@ buildscript {
     dependencies {
         classpath(Dependencies.androidGradlePlugin)
         classpath(Dependencies.kotlinGradlePlugin)
+        classpath(Dependencies.publishGradlePlugin)
     }
 }
 
 plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.16.0-RC1"
-    id("org.shipkit.java") version "2.3.5"
-    id("com.github.ben-manes.versions") version "0.36.0"
+    id("io.gitlab.arturbosch.detekt") version "1.18.0-RC3"
+    id("com.github.ben-manes.versions") version "0.39.0"
+    id("org.shipkit.shipkit-changelog") version "1.1.15"
+    id("org.shipkit.shipkit-github-release") version "1.1.15"
+    id("org.shipkit.shipkit-auto-version") version "1.1.19"
 }
 
 repositories {
@@ -32,24 +37,36 @@ dependencies {
 }
 
 detekt {
-    input = files(projectDir)
+    source = files(projectDir)
     config = rootProject.files("detekt-config.yml")
 }
 
-tasks.withType(Detekt::class) {
-    exclude("build/")
-    exclude("buildSrc/build/")
-    parallel = true
-    reports {
-        xml.enabled = true
-        html.enabled = false
-        txt.enabled = false
+tasks {
+    withType(GenerateChangelogTask::class) {
+        previousRevision = project.ext["shipkit-auto-version.previous-tag"] as String
+        githubToken = System.getenv("GH_READ_TOKEN")
+        repository = "DroidsOnRoids/FoQA"
     }
-}
-
-tasks.withType(KotlinCompile::class).all {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xexplicit-api=strict")
+    withType(GithubReleaseTask::class) {
+        repository = "DroidsOnRoids/FoQA"
+        changelog = File(buildDir, "changelog.md")
+        githubToken = System.getenv("GH_WRITE_TOKEN")
+        newTagRevision = System.getenv("BITRISE_GIT_COMMIT")
+    }
+    withType(Detekt::class) {
+        exclude("build/")
+        exclude("buildSrc/build/")
+        parallel = true
+        reports {
+            xml.enabled = true
+            html.enabled = false
+            txt.enabled = false
+        }
+    }
+    withType(KotlinCompile::class).all {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xexplicit-api=strict")
+        }
     }
 }
 
@@ -69,14 +86,13 @@ subprojects {
     apply(plugin = "com.android.library")
     apply(plugin = "kotlin-android")
     apply(plugin = "kotlin-kapt")
-    apply(plugin = "org.shipkit.bintray")
-    apply(plugin = "org.shipkit.android-publish")
+    apply(plugin = "com.vanniktech.maven.publish")
 
     with(extensions.getByName("android") as LibraryExtension) {
-        compileSdkVersion(Dependencies.compileSdk)
+        compileSdk = Dependencies.compileSdk
         defaultConfig {
-            setMinSdkVersion(Dependencies.minSdk)
-            setTargetSdkVersion(Dependencies.targetSdk)
+            minSdk = Dependencies.minSdk
+            targetSdk = Dependencies.targetSdk
         }
 
         resourcePrefix = "foqa_"

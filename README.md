@@ -42,7 +42,8 @@ repositories {
 - Hyperion menu item with font scale changer [Hyperion Font Scale](#font-scale-plugin)
 - Hyperion menu item with [Chucker](https://github.com/ChuckerTeam/chucker) launcher [Hyperion FoQA Chucker](#chucker-plugin)
 
-See [build.gradle](foqa/build.gradle) for a complete list of components. And [build.gradle](build.gradle.kts) for versions.
+See [build.gradle.kts](foqa/build.gradle.kts) for a complete list of components.
+And [Dependencies.kt](src/main/kotlin/Dependencies.kt) for versions.
 
 ## FoQA Hyperion plugins
 

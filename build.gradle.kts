@@ -19,7 +19,7 @@ buildscript {
 }
 
 plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.18.0-RC3"
+    id("io.gitlab.arturbosch.detekt") version "1.18.1"
     id("com.github.ben-manes.versions") version "0.39.0"
     id("org.shipkit.shipkit-changelog") version "1.1.15"
     id("org.shipkit.shipkit-github-release") version "1.1.15"

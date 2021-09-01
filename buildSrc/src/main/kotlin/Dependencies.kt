@@ -1,12 +1,12 @@
 object Dependencies {
     const val compileSdk = 31
-    const val targetSdk = 30
+    const val targetSdk = 31
     const val minSdk = 19
 
     const val autoService = "com.google.auto.service:auto-service:1.0"
     const val androidxAnnotations = "androidx.annotation:annotation:1.3.0-alpha01"
-    const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.18.0-RC3"
-    const val detektCli = "io.gitlab.arturbosch.detekt:detekt-cli:1.18.0"
+    const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.18.1"
+    const val detektCli = "io.gitlab.arturbosch.detekt:detekt-cli:1.18.1"
     const val hyperionCore = "com.willowtreeapps.hyperion:hyperion-core:0.9.33"
     const val hyperionPlugin = "com.willowtreeapps.hyperion:hyperion-plugin:0.9.33"
     const val hyperionAttr = "com.willowtreeapps.hyperion:hyperion-attr:0.9.33"

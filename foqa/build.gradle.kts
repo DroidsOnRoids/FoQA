@@ -1,6 +1,3 @@
-// androidPublish.artifactId = "foqa"
-// description = "Various Quality Assurance utilities to be included in QA/testing variants of Android apps"
-
 android {
     defaultConfig {
         consumerProguardFile("consumer-progruard-rules.pro")

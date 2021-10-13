@@ -19,6 +19,8 @@ dependencies {
     implementation(Dependencies.hyperionBuildConfig)
     implementation(Dependencies.hyperionAppInfo)
     api(Dependencies.chucker)
+    api(platform(Dependencies.okHttpBom))
+    api(Dependencies.okHttp)
     implementation(Dependencies.debugDb)
 
     implementation(project(":device_info_plugin"))

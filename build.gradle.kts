@@ -19,11 +19,11 @@ buildscript {
 }
 
 plugins {
-    id("io.gitlab.arturbosch.detekt") version "1.18.1"
-    id("com.github.ben-manes.versions") version "0.39.0"
-    id("org.shipkit.shipkit-changelog") version "1.1.15"
-    id("org.shipkit.shipkit-github-release") version "1.1.15"
-    id("org.shipkit.shipkit-auto-version") version "1.1.19"
+    id("io.gitlab.arturbosch.detekt") version "1.21.0"
+    id("com.github.ben-manes.versions") version "0.42.0"
+    id("org.shipkit.shipkit-changelog") version "1.2.0"
+    id("org.shipkit.shipkit-github-release") version "1.2.0"
+    id("org.shipkit.shipkit-auto-version") version "1.2.1"
 }
 
 repositories {

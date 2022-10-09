@@ -22,6 +22,7 @@ android {
             matchingFallbacks += "release"
         }
     }
+    namespace = "pl.droidsonroids.foqa.sample"
 }
 
 dependencies {

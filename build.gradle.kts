@@ -23,7 +23,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.42.0"
     id("org.shipkit.shipkit-changelog") version "1.2.0"
     id("org.shipkit.shipkit-github-release") version "1.2.0"
-    id("org.shipkit.shipkit-auto-version") version "1.2.1"
+    id("org.shipkit.shipkit-auto-version") version "1.2.2"
 }
 
 repositories {

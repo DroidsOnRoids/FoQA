@@ -2,6 +2,7 @@ android {
     defaultConfig {
         consumerProguardFile("consumer-progruard-rules.pro")
     }
+    namespace = "pl.droidsonroids.foqa"
 }
 
 dependencies {

@@ -1,4 +1,6 @@
 import com.android.build.gradle.LibraryExtension
+import com.vanniktech.maven.publish.MavenPublishBaseExtension
+import com.vanniktech.maven.publish.SonatypeHost
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.shipkit.changelog.GenerateChangelogTask
@@ -100,6 +102,14 @@ subprojects {
         variantFilter {
             ignore = name == "debug"
         }
+    }
+
+    extensions.findByType(MavenPublishBaseExtension::class)?.apply {
+        publishToMavenCentral(
+            host = SonatypeHost.DEFAULT,
+            automaticRelease = true // instead of closeAndReleaseRepository
+        )
+        signAllPublications()
     }
 
     dependencies {

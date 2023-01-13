@@ -23,7 +23,10 @@ object Dependencies {
     const val hyperionAppInfo = "com.star-zero:hyperion-appinfo:2.0.0"
     const val chucker = "com.github.ChuckerTeam.Chucker:library:3.5.2"
     const val deviceNames = "com.jaredrummler:android-device-names:2.1.0"
-    const val debugDb = "com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.6"
+
+    // debug-db uses legacy appcompat dependencies, using @aar will not force consumers to run jetifier on their side
+    const val debugDb = "com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.6@aar"
+
     const val multidex = "androidx.multidex:multidex:2.0.1"
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.3.1"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"

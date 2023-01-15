@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.4.0" type="baseline" client="gradle" dependencies="true" name="AGP (7.4.0)" variant="all" version="7.4.0">
+
+    <issue
+        id="NotificationPermission"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission (usage from com.chuckerteam.chucker.internal.support.NotificationHelper)">
+        <location
+            file="src/main/AndroidManifest.xml"/>
+    </issue>
+
+</issues>

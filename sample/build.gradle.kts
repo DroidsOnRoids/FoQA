@@ -15,6 +15,7 @@ android {
     lint {
         checkDependencies = true
         xmlOutput = rootProject.file("build/reports/lint/lint-results.xml")
+        baseline = file("lint-baseline.xml")
     }
 
     buildTypes {

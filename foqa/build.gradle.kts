@@ -22,11 +22,7 @@ dependencies {
     api(Dependencies.chucker)
     api(platform(Dependencies.okHttpBom))
     api(Dependencies.okHttp)
-    implementation(Dependencies.debugDb) {
-        // debugDb uses legacy appcompat dependencies, making it transitive will not force consumers
-        // to run jetifier on their side
-        isTransitive = true
-    }
+    implementation(Dependencies.debugDb)
 
     implementation(project(":device_info_plugin"))
     implementation(project(":font_scale_plugin"))

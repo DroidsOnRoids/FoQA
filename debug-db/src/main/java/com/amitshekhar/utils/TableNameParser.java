@@ -23,6 +23,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -163,9 +164,9 @@ public final class TableNameParser {
 
     private boolean isCreateIndex(String currentToken, String[] tokens, int index) {
         index++; // Point to next token
-        if (TOKEN_CREATE.equals(currentToken.toLowerCase()) && hasIthToken(tokens, index, 3)) {
+        if (TOKEN_CREATE.equalsIgnoreCase(currentToken) && hasIthToken(tokens, index, 3)) {
             String nextToken = tokens[index++];
-            if (TOKEN_INDEX.equals(nextToken.toLowerCase())) {
+            if (TOKEN_INDEX.equalsIgnoreCase(nextToken)) {
                 return true;
             }
 
@@ -186,11 +187,11 @@ public final class TableNameParser {
     }
 
     private boolean shouldProcess(final String currentToken) {
-        return concerned.contains(currentToken.toLowerCase());
+        return concerned.contains(currentToken.toLowerCase(Locale.ROOT));
     }
 
     private boolean isFromToken(final String currentToken) {
-        return KEYWORD_FROM.equals(currentToken.toLowerCase());
+        return KEYWORD_FROM.equalsIgnoreCase(currentToken);
     }
 
     private void processFromToken(final String[] tokens, int index) {
@@ -252,8 +253,8 @@ public final class TableNameParser {
     }
 
     private void considerInclusion(final String token) {
-        if (!ignored.contains(token.toLowerCase()) && !this.tables.containsKey(token.toLowerCase())) {
-            this.tables.put(token.toLowerCase(), token);
+        if (!ignored.contains(token.toLowerCase(Locale.ROOT)) && !this.tables.containsKey(token.toLowerCase(Locale.ROOT))) {
+            this.tables.put(token.toLowerCase(Locale.ROOT), token);
         }
     }
 

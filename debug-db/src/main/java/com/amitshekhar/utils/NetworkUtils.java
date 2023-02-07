@@ -34,7 +34,7 @@ public final class NetworkUtils {
     }
 
     public static String getAddressLog(Context context, int port) {
-        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         int ipAddress = wifiManager.getConnectionInfo().getIpAddress();
         @SuppressLint("DefaultLocale")
         final String formattedIpAddress = String.format("%d.%d.%d.%d",

@@ -5,7 +5,7 @@
 
     <application>
         <provider
-            android:name=".DebugDBInitProvider"
+            android:name="com.amitshekhar.debug.DebugDBInitProvider"
             android:authorities="${applicationId}.DebugDBInitProvider"
             android:enabled="true"
             android:exported="false" />

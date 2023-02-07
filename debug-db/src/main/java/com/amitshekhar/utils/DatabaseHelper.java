@@ -163,9 +163,7 @@ public class DatabaseHelper {
                                 columnData.value = cursor.getLong(i);
                                 break;
                             case Cursor.FIELD_TYPE_STRING:
-                                columnData.dataType = DataType.TEXT;
-                                columnData.value = cursor.getString(i);
-                                break;
+                            case Cursor.FIELD_TYPE_NULL:
                             default:
                                 columnData.dataType = DataType.TEXT;
                                 columnData.value = cursor.getString(i);

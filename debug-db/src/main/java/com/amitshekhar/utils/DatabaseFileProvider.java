@@ -19,12 +19,14 @@
 
 package com.amitshekhar.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Pair;
 
 import java.io.File;
 import java.text.MessageFormat;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Created by amitshekhar on 06/02/17.
@@ -56,9 +58,10 @@ public class DatabaseFileProvider {
         if (nameWithoutExt.endsWith(".db")) {
             nameWithoutExt = nameWithoutExt.substring(0, nameWithoutExt.lastIndexOf('.'));
         }
-        String resourceName = MessageFormat.format(DB_PASSWORD_RESOURCE, nameWithoutExt.toUpperCase());
+        String resourceName = MessageFormat.format(DB_PASSWORD_RESOURCE, nameWithoutExt.toUpperCase(Locale.ROOT));
         String password = "";
 
+        @SuppressLint("DiscouragedApi")
         int resourceId = context.getResources().getIdentifier(resourceName, "string", context.getPackageName());
 
         if (resourceId != 0) {

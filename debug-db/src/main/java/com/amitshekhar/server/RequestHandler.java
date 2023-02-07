@@ -52,6 +52,7 @@ import java.net.Socket;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by amitshekhar on 06/02/17.
@@ -262,7 +263,7 @@ public class RequestHandler {
                 for (int i = 0; i < statements.length; i++) {
 
                     String aQuery = statements[i].trim();
-                    first = aQuery.split(" ")[0].toLowerCase();
+                    first = aQuery.split(" ")[0].toLowerCase(Locale.ROOT);
                     if (first.equals("select") || first.equals("pragma")) {
                         TableDataResponse response = DatabaseHelper.getTableData(sqLiteDB, aQuery, null);
                         data = mGson.toJson(response);

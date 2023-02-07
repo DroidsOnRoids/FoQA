@@ -30,4 +30,6 @@ object Dependencies {
     const val publishGradlePlugin = "com.vanniktech:gradle-maven-publish-plugin:0.22.0"
     const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:4.10.0"
     const val okHttp = "com.squareup.okhttp3:okhttp"
+    const val gson = "com.google.code.gson:gson:2.9.1"
+    const val room = "androidx.room:room-runtime:2.5.0"
 }

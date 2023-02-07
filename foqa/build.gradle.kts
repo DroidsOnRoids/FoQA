@@ -22,8 +22,8 @@ dependencies {
     api(Dependencies.chucker)
     api(platform(Dependencies.okHttpBom))
     api(Dependencies.okHttp)
-    implementation(Dependencies.debugDb)
 
+    implementation(project(":debug-db"))
     implementation(project(":device_info_plugin"))
     implementation(project(":font_scale_plugin"))
     implementation(project(":chucker_plugin"))

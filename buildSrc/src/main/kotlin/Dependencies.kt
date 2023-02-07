@@ -23,7 +23,6 @@ object Dependencies {
     const val hyperionAppInfo = "com.star-zero:hyperion-appinfo:2.0.0"
     const val chucker = "com.github.ChuckerTeam.Chucker:library:3.5.2"
     const val deviceNames = "com.jaredrummler:android-device-names:2.1.0"
-    const val debugDb = "pl.droidsonroids.androiddebugdatabase:debug-db:0.2.0"
     const val multidex = "androidx.multidex:multidex:2.0.1"
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.4.0"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"

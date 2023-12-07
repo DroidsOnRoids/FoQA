@@ -24,7 +24,7 @@ object Dependencies {
     const val chucker = "com.github.chuckerteam.chucker:library:4.0.0"
     const val deviceNames = "com.jaredrummler:android-device-names:2.1.1"
     const val multidex = "androidx.multidex:multidex:2.0.1"
-    const val androidGradlePlugin = "com.android.tools.build:gradle:7.4.0"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:8.2.0"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
     const val publishGradlePlugin = "com.vanniktech:gradle-maven-publish-plugin:0.22.0"
     const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:4.10.0"

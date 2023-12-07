@@ -21,7 +21,7 @@ object Dependencies {
     const val hyperionTimber = "com.willowtreeapps.hyperion:hyperion-timber:0.9.37"
     const val hyperionBuildConfig = "com.willowtreeapps.hyperion:hyperion-build-config:0.9.37"
     const val hyperionAppInfo = "com.star-zero:hyperion-appinfo:2.0.0"
-    const val chucker = "com.github.ChuckerTeam.Chucker:library:3.5.2"
+    const val chucker = "com.github.chuckerteam.chucker:library:4.0.0"
     const val deviceNames = "com.jaredrummler:android-device-names:2.1.1"
     const val multidex = "androidx.multidex:multidex:2.0.1"
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.4.0"

@@ -5,8 +5,8 @@ object Dependencies {
 
     const val autoService = "com.google.auto.service:auto-service:1.1.1"
     const val androidxAnnotations = "androidx.annotation:annotation:1.7.0"
-    const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0"
-    const val detektCli = "io.gitlab.arturbosch.detekt:detekt-cli:1.21.0"
+    const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.23.4"
+    const val detektCli = "io.gitlab.arturbosch.detekt:detekt-cli:1.23.4"
     const val hyperionCore = "com.willowtreeapps.hyperion:hyperion-core:0.9.34"
     const val hyperionPlugin = "com.willowtreeapps.hyperion:hyperion-plugin:0.9.34"
     const val hyperionAttr = "com.willowtreeapps.hyperion:hyperion-attr:0.9.34"

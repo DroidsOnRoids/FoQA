@@ -30,5 +30,5 @@ object Dependencies {
     const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:4.12.0"
     const val okHttp = "com.squareup.okhttp3:okhttp"
     const val gson = "com.google.code.gson:gson:2.9.1"
-    const val room = "androidx.room:room-runtime:2.5.0"
+    const val room = "androidx.room:room-runtime:2.6.1"
 }

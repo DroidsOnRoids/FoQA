@@ -9,9 +9,10 @@ trigger_map:
   workflow: pr
 workflows:
   _prepare:
-    before_run:
-    - xutil_set_java_17
     steps:
+    - set-java-version@1:
+        inputs:
+        - set_java_version: '17'
     - git-clone: {}
     - cache-pull: {}
     - script@1:
@@ -53,32 +54,13 @@ workflows:
         title: Assemble sample
         inputs:
         - gradle_task: ":sample:assembleRelease"
-    - danger:
+    - danger@2.0:
         inputs:
         - github_api_token: "$DANGER_GITHUB_API_TOKEN"
     before_run:
     - _prepare
     after_run:
     - _publish_results
-  xutil_set_java_17:
-    steps:
-    - script@1:
-        title: Sets Java 17 in environment.
-        inputs:
-        - content: |-
-            #!/usr/bin/env bash
-            # fail if any commands fails
-            set -e
-            # make pipelines' return status equal the last command to exit with a non-zero status, or zero if all commands exit successfully
-            set -o pipefail
-            # debug log
-            set -x
-
-            sudo update-alternatives --set javac /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
-            sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
-
-            export JAVA_HOME='/usr/lib/jvm/java-17-openjdk-amd64'
-            envman add --key JAVA_HOME --value '/usr/lib/jvm/java-17-openjdk-amd64'
 app:
   envs:
   - opts:

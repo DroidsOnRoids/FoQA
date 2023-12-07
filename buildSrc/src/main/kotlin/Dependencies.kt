@@ -27,7 +27,7 @@ object Dependencies {
     const val androidGradlePlugin = "com.android.tools.build:gradle:8.2.0"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.21"
     const val publishGradlePlugin = "com.vanniktech:gradle-maven-publish-plugin:0.22.0"
-    const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:4.10.0"
+    const val okHttpBom = "com.squareup.okhttp3:okhttp-bom:4.12.0"
     const val okHttp = "com.squareup.okhttp3:okhttp"
     const val gson = "com.google.code.gson:gson:2.9.1"
     const val room = "androidx.room:room-runtime:2.5.0"

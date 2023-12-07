@@ -3,7 +3,7 @@ import org.gradle.api.JavaVersion
 object Dependencies {
     const val compileSdk = 34
     const val targetSdk = 34
-    const val minSdk = 19
+    const val minSdk = 21
     const val JAVA_VERSION_CODE = 17
     val JAVA_VERSION = JavaVersion.VERSION_17
     val JAVA_VERSION_NAME = JAVA_VERSION.toString()

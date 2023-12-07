@@ -3,7 +3,7 @@ object Dependencies {
     const val targetSdk = 33
     const val minSdk = 19
 
-    const val autoService = "com.google.auto.service:auto-service:1.0.1"
+    const val autoService = "com.google.auto.service:auto-service:1.1.1"
     const val androidxAnnotations = "androidx.annotation:annotation:1.5.0"
     const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0"
     const val detektCli = "io.gitlab.arturbosch.detekt:detekt-cli:1.21.0"

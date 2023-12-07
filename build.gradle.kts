@@ -2,6 +2,7 @@ import com.android.build.gradle.LibraryExtension
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
 import com.vanniktech.maven.publish.SonatypeHost
 import io.gitlab.arturbosch.detekt.Detekt
+import org.jetbrains.kotlin.gradle.dsl.kotlinExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.shipkit.changelog.GenerateChangelogTask
 import org.shipkit.github.release.GithubReleaseTask
@@ -66,8 +67,10 @@ tasks {
         }
     }
     withType(KotlinCompile::class).all {
+        kotlinExtension.jvmToolchain(jdkVersion = Dependencies.JAVA_VERSION_CODE)
         kotlinOptions {
             freeCompilerArgs = listOf("-Xexplicit-api=strict")
+            jvmTarget = Dependencies.JAVA_VERSION_NAME
         }
     }
 }
@@ -100,6 +103,11 @@ subprojects {
 
         variantFilter {
             ignore = name == "debug"
+        }
+
+        compileOptions {
+            sourceCompatibility = Dependencies.JAVA_VERSION
+            targetCompatibility = Dependencies.JAVA_VERSION
         }
     }
 

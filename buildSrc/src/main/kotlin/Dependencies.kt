@@ -1,7 +1,12 @@
+import org.gradle.api.JavaVersion
+
 object Dependencies {
     const val compileSdk = 33
     const val targetSdk = 33
     const val minSdk = 19
+    const val JAVA_VERSION_CODE = 17
+    val JAVA_VERSION = JavaVersion.VERSION_17
+    val JAVA_VERSION_NAME = JAVA_VERSION.toString()
 
     const val autoService = "com.google.auto.service:auto-service:1.1.1"
     const val androidxAnnotations = "androidx.annotation:annotation:1.7.0"

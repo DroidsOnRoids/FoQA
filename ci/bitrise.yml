@@ -1,0 +1,74 @@
+---
+format_version: '4'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: android
+trigger_map:
+- push_branch: master
+  workflow: deploy
+- pull_request_source_branch: "*"
+  workflow: pr
+workflows:
+  _prepare:
+    steps:
+    - set-java-version@1:
+        inputs:
+        - set_java_version: '17'
+    - git-clone: {}
+    - cache-pull: {}
+    - script@1:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            set -e
+
+            git fetch --tags
+        title: Fetch tags
+  _publish_results:
+    steps:
+    - deploy-to-bitrise-io: {}
+  deploy:
+    steps:
+    - gradle-runner:
+        inputs:
+        - gradle_file: ''
+        - gradlew_path: "./gradlew"
+        - gradle_options: "--stacktrace --no-daemon --no-parallel --scan"
+        - gradle_task: assemble publish
+    - cache-push: {}
+    before_run:
+    - _prepare
+  pr:
+    steps:
+    - gradle-unit-test:
+        inputs:
+        - unit_test_flags: "--continue --scan"
+    - gradle-runner@2:
+        title: Lint
+        inputs:
+        - gradle_task: ":sample:lint"
+    - gradle-runner@2:
+        title: Detekt
+        inputs:
+        - gradle_task: detekt
+    - gradle-runner@2:
+        title: Assemble sample
+        inputs:
+        - gradle_task: ":sample:assembleRelease"
+    - danger@2.0:
+        inputs:
+        - github_api_token: "$DANGER_GITHUB_API_TOKEN"
+    before_run:
+    - _prepare
+    after_run:
+    - _publish_results
+app:
+  envs:
+  - opts:
+      is_expand: false
+    PROJECT_LOCATION: "."
+  - TRAVIS_BRANCH: "$BITRISE_GIT_BRANCH"
+  - TRAVIS_PULL_REQUEST: "$PR"
+  - TRAVIS_COMMIT_MESSAGE: "$BITRISE_GIT_COMMIT"
+  - opts:
+      is_expand: false
+    GRADLEW_PATH: "./gradlew"

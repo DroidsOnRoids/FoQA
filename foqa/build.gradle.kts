@@ -19,6 +19,7 @@ dependencies {
     implementation(Dependencies.hyperionTimber)
     implementation(Dependencies.hyperionBuildConfig)
     implementation(Dependencies.hyperionAppInfo)
+    implementation(Dependencies.androidxStartup)
     api(Dependencies.chucker)
     api(platform(Dependencies.okHttpBom))
     api(Dependencies.okHttp)

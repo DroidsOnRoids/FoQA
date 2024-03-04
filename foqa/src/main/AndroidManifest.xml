@@ -1,10 +1,15 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application android:supportsRtl="true">
         <provider
-            android:name=".HyperionDisableProvider"
-            android:authorities="${applicationId}.hyperionDisableProvider"
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
-            android:initOrder="-2147483648" />
+            tools:node="merge">
+            <meta-data
+                android:name="pl.droidsonroids.foqa.HyperionDisableInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 </manifest>

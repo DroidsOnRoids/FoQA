@@ -1,7 +1,7 @@
 import com.android.build.gradle.LibraryExtension
 import com.vanniktech.maven.publish.MavenPublishBaseExtension
-import com.vanniktech.maven.publish.SonatypeHost
 import io.gitlab.arturbosch.detekt.Detekt
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.kotlinExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.shipkit.changelog.GenerateChangelogTask
@@ -67,10 +67,10 @@ tasks {
         }
     }
     withType(KotlinCompile::class).all {
-        kotlinExtension.jvmToolchain(jdkVersion = Dependencies.JAVA_VERSION_CODE)
-        kotlinOptions {
-            freeCompilerArgs = listOf("-Xexplicit-api=strict")
-            jvmTarget = Dependencies.JAVA_VERSION_NAME
+        kotlinExtension.jvmToolchain(jdkVersion = 21)
+        compilerOptions {
+            freeCompilerArgs.add("-Xexplicit-api=strict")
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
 }
@@ -113,14 +113,12 @@ subprojects {
 
     extensions.findByType(MavenPublishBaseExtension::class)?.apply {
         publishToMavenCentral(
-            host = SonatypeHost.DEFAULT,
             automaticRelease = true // instead of closeAndReleaseRepository
         )
         signAllPublications()
     }
 
     dependencies {
-        "implementation"(kotlin("stdlib-jdk7"))
         "implementation"(Dependencies.hyperionPlugin)
         "kapt"(Dependencies.autoService)
     }

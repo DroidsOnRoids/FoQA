@@ -1,5 +1,5 @@
 dependencies {
-    compileOnly(Dependencies.androidxAnnotations)
+    compileOnly(libs.androidx.annotations)
 }
 android {
     namespace = "pl.droidsonroids.foqa.fontscale"

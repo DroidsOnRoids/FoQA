@@ -11,6 +11,7 @@ import com.jaredrummler.android.device.DeviceName
 import com.willowtreeapps.hyperion.plugin.v1.Plugin
 import com.willowtreeapps.hyperion.plugin.v1.PluginModule
 
+@Suppress("unused")
 @AutoService(Plugin::class)
 class DeviceInfoPlugin : Plugin() {
     override fun createPluginModule(): PluginModule = DeviceInfoModule()

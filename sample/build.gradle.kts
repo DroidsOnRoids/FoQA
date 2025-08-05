@@ -1,21 +1,19 @@
 plugins {
-    id("com.android.application")
+    alias(libs.plugins.android.application)
 }
 
 android {
-    compileSdk = Dependencies.compileSdk
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         versionCode = 1
         applicationId = "pl.droidsonroids.foqa.sample"
-        minSdk = Dependencies.minSdk
-        targetSdk = Dependencies.targetSdk
-        multiDexEnabled = true
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
     }
 
     lint {
         checkDependencies = true
         xmlOutput = rootProject.file("build/reports/lint/lint-results.xml")
-        baseline = file("lint-baseline.xml")
     }
 
     buildTypes {
@@ -26,7 +24,10 @@ android {
     namespace = "pl.droidsonroids.foqa.sample"
 }
 
+kotlin {
+    jvmToolchain(libs.versions.java.get().toInt())
+}
+
 dependencies {
-    implementation(project(":foqa"))
-    implementation(Dependencies.multidex)
+    implementation(projects.foqa)
 }

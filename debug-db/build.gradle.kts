@@ -3,6 +3,6 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.gson)
-    implementation(Dependencies.room)
+    implementation(libs.gson)
+    implementation(libs.room)
 }

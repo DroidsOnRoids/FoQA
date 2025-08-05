@@ -19,9 +19,10 @@
 
 package com.amitshekhar.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.wifi.WifiManager;
+
+import java.util.Locale;
 
 /**
  * Created by amitshekhar on 15/11/16.
@@ -35,9 +36,10 @@ public final class NetworkUtils {
 
     public static String getAddressLog(Context context, int port) {
         WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        //noinspection RedundantSuppression
+        @SuppressWarnings("deprecation")
         int ipAddress = wifiManager.getConnectionInfo().getIpAddress();
-        @SuppressLint("DefaultLocale")
-        final String formattedIpAddress = String.format("%d.%d.%d.%d",
+        final String formattedIpAddress = String.format(Locale.ROOT, "%d.%d.%d.%d",
                 (ipAddress & 0xff),
                 (ipAddress >> 8 & 0xff),
                 (ipAddress >> 16 & 0xff),

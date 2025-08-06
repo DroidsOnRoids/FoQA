@@ -12,4 +12,4 @@
     android:text="@string/foqa_chucker_plugin_name"
     android:textColor="@color/hype_plugin_color_selector"
     android:textSize="16sp"
-    app:drawableStartCompat="@drawable/foqa_ic_perm_scan_wifi" />
+    android:drawableStart="@drawable/foqa_ic_perm_scan_wifi" />

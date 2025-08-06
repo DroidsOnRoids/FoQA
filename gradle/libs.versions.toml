@@ -1,0 +1,62 @@
+[versions]
+compileSdk = "36"
+targetSdk = "36"
+minSdk = "21"
+java = "21"
+
+androidGradlePlugin = "8.12.0"
+publishGradlePlugin = "0.34.0"
+versionsGradlePlugin = "0.52.0"
+autoService = "1.1.1"
+androidxAnnotations = "1.9.1"
+androidxStartup = "1.2.0"
+detekt = "1.23.8"
+hyperion = "0.9.38"
+hyperionAppInfo = "2.0.0"
+chucker = "4.2.0"
+deviceNames = "2.1.1"
+okHttpBom = "5.1.0"
+gson = "2.13.1"
+shipkitChangelog = "2.0.1"
+shipkitAutoVersion = "2.1.2"
+shipkitGithubRelease = "2.0.1"
+kotlin = "2.2.0"
+room = "2.7.2"
+
+[libraries]
+auto-service = { module = "com.google.auto.service:auto-service", version.ref = "autoService" }
+androidx-annotations = { module = "androidx.annotation:annotation", version.ref = "androidxAnnotations" }
+androidx-startup = { module = "androidx.startup:startup-runtime", version.ref = "androidxStartup" }
+room = { module = "androidx.room:room-runtime", version.ref = "room" }
+detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detekt-cli = { module = "io.gitlab.arturbosch.detekt:detekt-cli", version.ref = "detekt" }
+hyperion-core = { module = "com.willowtreeapps.hyperion:hyperion-core", version.ref = "hyperion" }
+hyperion-plugin = { module = "com.willowtreeapps.hyperion:hyperion-plugin", version.ref = "hyperion" }
+hyperion-attr = { module = "com.willowtreeapps.hyperion:hyperion-attr", version.ref = "hyperion" }
+hyperion-measurement = { module = "com.willowtreeapps.hyperion:hyperion-measurement", version.ref = "hyperion" }
+hyperion-disk = { module = "com.willowtreeapps.hyperion:hyperion-disk", version.ref = "hyperion" }
+hyperion-recorder = { module = "com.willowtreeapps.hyperion:hyperion-recorder", version.ref = "hyperion" }
+hyperion-phoenix = { module = "com.willowtreeapps.hyperion:hyperion-phoenix", version.ref = "hyperion" }
+hyperion-crash = { module = "com.willowtreeapps.hyperion:hyperion-crash", version.ref = "hyperion" }
+hyperion-shared-preferences = { module = "com.willowtreeapps.hyperion:hyperion-shared-preferences", version.ref = "hyperion" }
+hyperion-geiger-counter = { module = "com.willowtreeapps.hyperion:hyperion-geiger-counter", version.ref = "hyperion" }
+hyperion-timber = { module = "com.willowtreeapps.hyperion:hyperion-timber", version.ref = "hyperion" }
+hyperion-build-config = { module = "com.willowtreeapps.hyperion:hyperion-build-config", version.ref = "hyperion" }
+hyperion-app-info = { module = "com.star-zero:hyperion-appinfo", version.ref = "hyperionAppInfo" }
+chucker = { module = "com.github.chuckerteam.chucker:library", version.ref = "chucker" }
+okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okHttpBom" }
+okhttp = { module = "com.squareup.okhttp3:okhttp" }
+device-names = { module = "com.jaredrummler:android-device-names", version.ref = "deviceNames" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "publishGradlePlugin" }
+shipkit-changelog = { id = "org.shipkit.shipkit-changelog", version.ref = "shipkitChangelog" }
+shipkit-auto-version = { id = "org.shipkit.shipkit-auto-version", version.ref = "shipkitAutoVersion" }
+shipkit-github-release = { id = "org.shipkit.shipkit-github-release", version.ref = "shipkitGithubRelease" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versionsGradlePlugin" }

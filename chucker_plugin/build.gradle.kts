@@ -1,7 +1,7 @@
 dependencies {
-    api(Dependencies.chucker)
-    api(platform(Dependencies.okHttpBom))
-    api(Dependencies.okHttp)
+    api(libs.chucker)
+    api(platform(libs.okhttp.bom))
+    api(libs.okhttp)
 }
 android {
     namespace = "pl.droidsonroids.foqa.chucker"

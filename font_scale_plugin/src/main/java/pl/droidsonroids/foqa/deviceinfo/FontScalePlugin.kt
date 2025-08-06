@@ -5,6 +5,7 @@ import com.google.auto.service.AutoService
 import com.willowtreeapps.hyperion.plugin.v1.Plugin
 import com.willowtreeapps.hyperion.plugin.v1.PluginModule
 
+@Suppress("unused")
 @AutoService(Plugin::class)
 class FontScalePlugin : Plugin() {
 

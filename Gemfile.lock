@@ -45,7 +45,7 @@ GEM
     git (1.19.1)
       addressable (~> 2.8)
       rchardet (~> 1.8)
-    json (2.18.1)
+    json (2.19.2)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)

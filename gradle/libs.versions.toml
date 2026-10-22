@@ -20,7 +20,7 @@ gson = "2.14.0"
 shipkitChangelog = "2.0.1"
 shipkitAutoVersion = "2.1.2"
 shipkitGithubRelease = "2.0.1"
-kotlin = "2.2.0"
+kotlin = "2.4.21"
 room = "2.7.2"
 
 [libraries]

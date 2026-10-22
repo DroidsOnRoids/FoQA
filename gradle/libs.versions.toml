@@ -4,7 +4,7 @@ targetSdk = "36"
 minSdk = "21"
 java = "21"
 
-androidGradlePlugin = "8.13.2"
+androidGradlePlugin = "9.4.1"
 publishGradlePlugin = "0.37.0"
 versionsGradlePlugin = "0.52.0"
 autoService = "1.1.1"

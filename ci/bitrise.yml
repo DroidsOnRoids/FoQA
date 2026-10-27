@@ -42,15 +42,15 @@ workflows:
       - gradle-unit-test:
           inputs:
             - unit_test_flags: "--continue --scan"
-      - gradle-runner@3:
+      - gradle-runner@6.0.0:
           title: Lint
           inputs:
             - gradle_task: ":sample:lint"
-      - gradle-runner@3:
+      - gradle-runner@6.0.0:
           title: Detekt
           inputs:
             - gradle_task: detekt
-      - gradle-runner@3:
+      - gradle-runner@6.0.0:
           title: Assemble sample
           inputs:
             - gradle_task: ":sample:assembleRelease"
